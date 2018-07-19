@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      
+
+      <title>Rail-GO a new initiative</title>
+  <meta charset="utf-8">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+          
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.navbar{
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: purple;
+  color: white;
+  padding: 1% 0;
+  font-size: 1.2em;
+  border: 0; 
+}
+.navbar-brand{
+  float: left;
+  min-height: 55px;
+  padding: 0 15px 5px;
+
+}
+.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus,.navbar-inverse .navbar-nav .active a:hover{
+  color:white;
+  background-color: purple;
+
+}
+.navbar-inverse .navbar-nav li a{
+  color: wheat;
+}
+.carousel-caption{
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+.btn{
+  font-size: 18px;
+  color: white;
+  padding: 12px 22px;
+  background: purple;
+  border: 2px solid white;
+}
+#icon{
+  max-width: 200px;
+  margin: 1% auto;
+}
+@media(max-width: 600px){
+  .carousel-caption{
+    display:none;
+  }
+  
+  #icon{
+    max-width: 150px;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+}
+h4,h3{
+  font-weight: bolder;
+}
+
+  </style>
+    </head>
+
+    <body>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+        </script>
+            <nav>
+                    <div class="nav-wrapper">
+                      <a href="#!" class="brand-logo">Logo</a>
+                      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">Javascript</a></li>
+                        <li><a href="mobile.html">Mobile</a></li>
+                      </ul>
+                    </div>
+
+                    
+                  </nav>
+                
+                  <ul class="sidenav" id="mobile-demo">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                  </ul>
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1" ></li>
+                      <li data-target="#myCarousel" data-slide-to="2" ></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <img src="img/rail2.jpg">
+                        <div class="carousel-caption">
+                          <h1>All the services at one place</h1>
+                          <br>
+                          <form>
+                            <input type="button" class ="btn btn-default" value="Login" onclick="window.location.href='login.html'" />
+                            </form>
+                          
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="img/rail3.jpg">
+                      </div>
+                      <div class="item">
+                          <img src="img/rail4.jpg">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                  </div>
+                  <div class="container text-center">
+                    <h2>Who are we?</h3>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <img src="img/ankit.jpg" id="icon">
+                        <h4>Ankit Kumar</h4>
+                  
+                      </div>
+                      <div class="col-sm-3">
+                          <img src="img/anurag.jpg" id="icon">
+                          <h4>Anurag Verma</h4>
+                    
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="img/ateeb.jpg" id="icon">
+                            <h4>Ateeb Raza</h4>
+                      
+                          </div>
+                          <div class="col-sm-3">
+                              <img src="img/image-2018-07-17.jpg" id="icon">
+                              <h4>Ujjwal Bhuwania</h4>
+                        
+                            </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4>Something about the project</h4>
+                        <p>Insert text here..
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  
+                      </div>
+                      <div class="col-md-6">
+                        <img src="img/railway.jpg"class="img-responsive">
+                        </div>
+                  
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <h4>A new way to check train details</h4>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <img src="img/less.png" class="img-responsive">
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-xs-12">
+                          <h4>Technology stack used:</h4>
+                          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                            <img src="img/sass.png" class="img-responsive">
+                          </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                      <div class="row">
+                        <h4><a href="#hidden" data-toggle="collapse">Have some suggestions?</a></h4>
+                        <div id="hidden" class="collapse">
+                          <h4>Shoot here</h4>
+                          <div class="form-group">
+                            <label for="usr">Name:</label>
+                            <input type="text" class="form-control" id="usr">
+                          </div>
+                          <div class="form-group">
+                            <label for="comment">Suggestions:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
