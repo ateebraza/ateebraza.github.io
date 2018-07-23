@@ -2,12 +2,21 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+      </head>
     <style>
         * {
             box-sizing: border-box;
         }
 
+        .display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;
+           
+        }
         .h2 {
             text-align: center;
             color: black;
@@ -106,13 +115,16 @@
         </form>
         <button onclick="myFunction()">Submit</button>
         </div>
+        
         <script>
-
+            
             $(document).ready(function () {
                 console.log('ready')
                 $("button").click(function (event) {
                     event.preventDefault();
-
+                    $("button").animate({
+            height: 'toggle'
+        });
                     var date = $("input").val();
                     var url = "https://api.railwayapi.com/v2/cancelled/date/" + date + "/apikey/hle1qd3kks/";
 
@@ -128,10 +140,12 @@
                     });
                 });
             });
+       
         </script>
 
-
+        <div class="display1">
         <h3></h3>
+        </div>
 
 
 </body>

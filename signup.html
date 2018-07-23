@@ -67,6 +67,7 @@ a {
 }
 </style>
 </head>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 <body>
 
 <form action="/action_page.php">
@@ -76,23 +77,23 @@ a {
     <hr>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input id="txtemail" type="text" placeholder="Enter Email" name="email" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input id="txtpassword" type="password" placeholder="Enter Password" name="psw" required>
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
     <hr>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
-    <button type="submit" class="registerbtn">Register</button>
+    <button id="btnsignup" type="submit" class="registerbtn">Register</button>
   </div>
   
   <div class="container signin">
     <p>Already have an account? <a href="login.html">Sign in</a>.</p>
   </div>
 </form>
-
+<script src="js/app2.js"></script>
 </body>
 </html>

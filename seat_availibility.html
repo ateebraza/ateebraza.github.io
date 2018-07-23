@@ -156,7 +156,7 @@ function myFunction() {
 $(document).ready(function(){
     $("button").click(function(){
         $.getJSON(url, function(result) {
-            $("h3").append(result.train.name + " "+"</br>"+result.availability[0].status+"");
+            $("h3").append("Name: "+result.train.name + " "+"</br>"+"Number: "+result.train.number + " "+"</br>"+"From: "+result.from_station.name + " "+"</br>"+"To: "+result.to_station.name + " "+"</br>"+"Quota: "+result.quota.name + " "+"</br>"+"Availibility: "+result.availability[0].date + " "+"  "+"  "+"Seat Available: "+result.availability[0].status+" "+"</br>"+"Availibility: "+result.availability[1].date + " "+"  "+"  "+"Seat Available: "+result.availability[1].status+" "+"</br>"+"Availibility: "+result.availability[2].date + " "+"  "+"  "+"Seat Available: "+result.availability[2].status+" "+" ");
 			console.log(result);
         });
     });
