@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,6 @@
 * {
     box-sizing: border-box;
 }
-
 .h2{
     text-align: center;
     color: black;
@@ -19,12 +19,10 @@ input[type=text], select, textarea {
     border-radius: 4px;
     resize: vertical;
 }
-
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
-
 input[type=submit] {
     background-color: #4CAF50;
     color: white;
@@ -34,36 +32,30 @@ input[type=submit] {
     cursor: pointer;
     float: right;
 }
-
 input[type=submit]:hover {
     background-color: #45a049;
 }
-
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
 }
-
 .col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
 }
-
 .col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
@@ -72,13 +64,14 @@ input[type=submit]:hover {
     }
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
 <h2>Train between stations</h2>
 
 <div class="container">
-  <form action="">
+  <form id="frm1" action="">
     
    
    
@@ -107,10 +100,45 @@ input[type=submit]:hover {
         </div>
       </div>
 
-    <div class="row">
-        <input type="submit" value="Submit">
-      </div>
+   
     </form>
+	<button onclick="myFunction()">Submit</button>
   </div>
+  <script>
+var url = "";
+function myFunction() {
+    var x = document.getElementById("frm1");
+    var sc = "";
+	var dc = "";
+	var date = "";
+	
+    sc = x.elements[0].value;
+	dc = x.elements[1].value;
+	date = x.elements[2].value;
+	//console.log(tn);
+    
+    //document.getElementById("tno").innerHTML = tno;
+	//document.getElementById("date").innerHTML = date;
+	
+	//url= "https://api.railwayapi.com/v2/name-number/train/"+tn+"/apikey/41tyikuobu/"
+	url= "https://api.railwayapi.com/v2/between/source/"+sc+"/dest/"+dc+"/date/"+date+"/apikey/hle1qd3kks/"
+}
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON(url, function(result) {
+            //$("h3").append("Train Number: "+result.train.number + " "+"</br>"+"Train Number: "+result.train.name+" "+"</br>");
+			$("h3").append("total no. of train running"+result.trains.length+"</br></br>");
+			for(var i=0;i<result.trains.length;i++){
+			$("h3").append("Number: "+result.trains[i].number +" "+"</br>"+"Name: "+result.trains[i].name+" "+"</br>"+"Travel_time: "+result.trains[i].travel_time +" "+"</br>"+"Departure Time: "+result.trains[i].src_departure_time +" "+"</br>"+"Arrival Time: "+result.trains[i].dest_arrival_time+" "+"</br>"+"From: "+result.trains[i].from_station.name +" "+"</br>"+"To: "+result.trains[i].to_station.name +" "+"</br></br>");
+			}
+			console.log(result);
+        });
+    });
+});
+</script>
+
+
+<h3></h3>
+
   </body>
   </html>

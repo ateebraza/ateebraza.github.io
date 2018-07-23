@@ -73,12 +73,13 @@ input[type=submit]:hover {
 }
 </style>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body>
 
 <h2>Get station name</h2>
 
 <div class="container">
-  <form action="">
+  <form action="" id="frm1">
     <div class="row">
       <div class="col-25">
         <label for="Station code">Station code</label>
@@ -87,14 +88,34 @@ input[type=submit]:hover {
         <input type="text" id="sce" name="sce" placeholder="Station Code">
       </div>
     </div>
-   
-    
-    
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
-</div>
 
+  </form>
+   <button onclick="myFunction()">Submit</button>
+   <p id="sc"></p>
+</div>
+<script>
+var url = "";
+function myFunction() {
+    var x = document.getElementById("frm1");
+    var station_code = "";
+	
+    station_code= x.elements[0].value;
+     //document.getElementById("sc").innerHTML = station_code;
+   
+	url="https://api.railwayapi.com/v2/code-to-name/code/"+station_code+"/apikey/hle1qd3kks/";
+	
+}
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON(url, function(result) {
+		
+            $("h3").append("Station Name :"+result.stations[0].name + "</br> "+"Longitude :"+result.stations[0].lng+"</br>"+"Latitude :"+result.stations[0].lat+"</br> ");
+			console.log(result.stations[0].name);
+			
+        });
+    });
+});
+</script>
+<h3></h3>
 </body>
 </html>

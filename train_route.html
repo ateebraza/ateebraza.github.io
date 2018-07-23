@@ -6,7 +6,6 @@
 * {
     box-sizing: border-box;
 }
-
 .h2{
     text-align: center;
     color: black;
@@ -19,12 +18,10 @@ input[type=text], select, textarea {
     border-radius: 4px;
     resize: vertical;
 }
-
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
-
 input[type=submit] {
     background-color: #4CAF50;
     color: white;
@@ -34,36 +31,30 @@ input[type=submit] {
     cursor: pointer;
     float: right;
 }
-
 input[type=submit]:hover {
     background-color: #45a049;
 }
-
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
 }
-
 .col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
 }
-
 .col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
@@ -73,12 +64,13 @@ input[type=submit]:hover {
 }
 </style>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body>
 
 <h2>Get Route</h2>
 
 <div class="container">
-  <form action="">
+  <form id="frm1" action="">
     <div class="row">
       <div class="col-25">
         <label for="tno">Enter train number</label> 
@@ -90,11 +82,43 @@ input[type=submit]:hover {
    
     
     
-    <div class="row">
-      <input type="submit" value="Submit">
+    
     </div>
   </form>
+   <button onclick="myFunction()">Submit</button>
 </div>
+<script>
+var url = "";
+function myFunction() {
+    var x = document.getElementById("frm1");
+    var tno = "";
+	
+    tno = x.elements[0].value;
+    
+    //document.getElementById("tno").innerHTML = tno;
+	//document.getElementById("date").innerHTML = date;
+	//url="https://api.railwayapi.com/v2/live/train/"+tno+"/date/"+date+"/apikey/41tyikuobu/";
+	url="https://api.railwayapi.com/v2/route/train/"+tno+"/apikey/hle1qd3kks/"
+	
+}
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON(url, function(result) {
+		 $("h3").append(result.train.name+" "+"</br>"+"</br>");
+		 //$("h3").append("no.    Arr    Dep    Dis    Halt    Day    Name"+"</br>");   
+		for(var i=0;i<result.route.length;i++){
+            $("h3").append(result.route[i].no+"    "+result.route[i].scharr+"    "+result.route[i].schdep+"    "+result.route[i].distance+"    "+result.route[i].halt+"    "+result.route[i].day+"    "+result.route[i].station.name+"    "+"</br>");
+			}
+			//console.log(result["position"]);
+        });
+    });
+});
+</script>
+
+
+<h3></h3>
+<h5></h5>
+
 
 </body>
 </html>
