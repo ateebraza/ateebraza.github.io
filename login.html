@@ -1,6 +1,5 @@
 <html>
 <head>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 <title>Login Form </title>
 <style>
     body{
@@ -95,18 +94,18 @@ h1{
     <img src="img/avatar.png" class="avatar">
         <h1>Login Here</h1>
         <form>
-            <p>Email_Id</p>
-            <input id="txtemail" type="text" name="" placeholder="Enter Email_Id">
+            <p>Username</p>
+            <input type="text" name="" placeholder="Enter Username">
             <p>Password</p>
-            <input id="txtpassword" type="password" name="" placeholder="Enter Password">
-            <input id="btnlogin " type="button" value="Login" href="services.html" >
+            <input type="password" name="" placeholder="Enter Password">
+            <input type="button" value="Login" onclick="window.location.href='services.html'">
             <a href ="index.html">Return to home page</a>
             <br>
             <a href="signup.html">Don't have an account?</a>
         </form>
         
     </div>
-<script src="js/app.js"></script>
+
 </body>
 </head>
 </html>
