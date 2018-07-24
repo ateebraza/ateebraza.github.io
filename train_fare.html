@@ -39,6 +39,17 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
+.h3{
+            text-align: center;
+            color:#444;
+            text-justify: auto;
+}
+.display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;
+}
 .col-25 {
     float: left;
     width: 25%;
@@ -163,6 +174,9 @@ function myFunction() {
 }
 $(document).ready(function(){
     $("button").click(function(){
+      $("button").animate({
+            height: 'toggle'
+        });
         $.getJSON(url, function(result) {
             $("h3").append("Name: "+result.train.name + " "+"</br>"+"Number: "+result.train.number + " "+"</br>"+"From: "+result.from_station.name + " "+"</br>"+"To: "+result.to_station.name + " "+"</br>"+"Quota: "+result.quota.name + " "+"</br>"+"Class: "+result.journey_class.code + " "+"  "+"  "+"Fare: "+result.fare+" "+"</br></br>");
 			console.log(result);
@@ -170,7 +184,10 @@ $(document).ready(function(){
     });
 });
 </script>
-<h3></h3>
+<div class="display1">
+
+  <h3></h3>
+  </div>
 
 </body>
 </html>

@@ -71,6 +71,17 @@ input[type=submit]:hover {
         margin-top: 0;
     }
 }
+.h3{
+            text-align: center;
+            color:#444;
+            text-justify: auto;
+}
+.display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;
+}        
 </style>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -107,6 +118,9 @@ function myFunction() {
 }
 $(document).ready(function(){
     $("button").click(function(){
+        $("button").animate({
+            height: 'toggle'
+        });
         $.getJSON(url, function(result) {
 		
             $("h3").append("Station Name :"+result.stations[0].name + "</br> "+"Longitude :"+result.stations[0].lng+"</br>"+"Latitude :"+result.stations[0].lat+"</br> ");
@@ -116,6 +130,9 @@ $(document).ready(function(){
     });
 });
 </script>
-<h3></h3>
+<div class="display1">
+
+    <h3></h3>
+    </div>
 </body>
 </html>

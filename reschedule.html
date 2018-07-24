@@ -18,6 +18,18 @@ input[type=text], select, textarea {
     border-radius: 4px;
     resize: vertical;
 }
+.h3{
+            text-align: center;
+            color:#444;
+            text-justify: auto;
+}
+.display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;
+            
+}
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
@@ -99,6 +111,9 @@ function myFunction() {
 }
 $(document).ready(function(){
     $("button").click(function(){
+        $("button").animate({
+            height: 'toggle'
+        });
         $.getJSON(url, function(result) {
 		$("h3").append("total no. of trains resheduled"+" "+result.trains.length+"</br></br>");
 	        for(var i=0;i<result.trains.length;i++){
@@ -111,6 +126,9 @@ $(document).ready(function(){
 </script>
 
 
-<h3></h3>
+<div class="display1">
+
+    <h3></h3>
+    </div>
 </body>
 </html>

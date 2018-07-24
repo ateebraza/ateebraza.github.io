@@ -31,6 +31,11 @@
         cursor: pointer;
         float: right;
     }
+    .display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;}
     input[type=submit]:hover {
         background-color: #45a049;
     }
@@ -102,6 +107,9 @@
     }
     $(document).ready(function(){
         $("button").click(function(){
+            $("button").animate({
+            height: 'toggle'
+        });
             $.getJSON(url, function(result) {
                 //$("h3").append(result.["doj"] + " ");
                $("h3").append("PNR: " + result.pnr + " " +"</br>"+ "Total Passenger: " + result.total_passengers + " " +"</br>"+ "From: " + result.from_station.name + " " +"</br>" + "To: " + result.to_station.name + " " +"</br>" + "Date: "+ result.doj + " "+"</br>" + "Train: "+result.train.name+" "+"</br>" + "Journey Class: "+result.journey_class.name+" "+"</br>" +"Passengers Status: "+result.passengers[0].current_status+" " );
@@ -111,6 +119,9 @@
         });
     });
     </script>
+   <div class="display1">
+
     <h3></h3>
+    </div>
     </body>
     </html>

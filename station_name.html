@@ -25,7 +25,17 @@ label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
-
+.h3{
+            text-align: center;
+            color:#444;
+            text-justify: auto;
+}
+.display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;
+}
 input[type=submit] {
     background-color: #4CAF50;
     color: white;
@@ -106,6 +116,9 @@ function myFunction() {
 }
 $(document).ready(function(){
     $("button").click(function(){
+        $("button").animate({
+            height: 'toggle'
+        });
         $.getJSON(url, function(result) {
             $("h3").append("Station Code :"+result.stations[0].code + "</br> "+"Longitude :"+result.stations[0].lng+"</br>"+"Latitude :"+result.stations[0].lat+"</br> ");
 			console.log(result);
@@ -113,6 +126,9 @@ $(document).ready(function(){
     });
 });
 </script>
-<h3></h3>
+<div class="display1">
+
+    <h3></h3>
+    </div>
 </body>
 </html>

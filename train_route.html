@@ -44,6 +44,17 @@ input[type=submit]:hover {
     width: 25%;
     margin-top: 6px;
 }
+.h3{
+            text-align: center;
+            color:#444;
+            text-justify: auto;
+}
+.display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;
+}
 .col-75 {
     float: left;
     width: 75%;
@@ -103,6 +114,9 @@ function myFunction() {
 }
 $(document).ready(function(){
     $("button").click(function(){
+        $("button").animate({
+            height: 'toggle'
+        });
         $.getJSON(url, function(result) {
 		 $("h3").append(result.train.name+" "+"</br>"+"</br>");
 		 //$("h3").append("no.    Arr    Dep    Dis    Halt    Day    Name"+"</br>");   
@@ -116,8 +130,11 @@ $(document).ready(function(){
 </script>
 
 
-<h3></h3>
-<h5></h5>
+<div class="display1">
+
+    <h3></h3>
+    </div>
+
 
 
 </body>

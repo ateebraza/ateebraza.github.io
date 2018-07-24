@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+            *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.about_us,technology{
+    text-justify: auto;
+    text-align: center;
+    
+    font-size: 20px;
+    position: relative;
+    height: auto;
+    overflow: auto;
+    
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #444;
+  
+  margin: 2rem 0;
+
+}
+.h2{
+    text-decoration: underline;
+}
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position:relative;
+    height:auto;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: gray;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 2000px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+    .about_us{
+        width: auto;
+        height: auto;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+h1,h2{
+  font-size: 2.5rem;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #444;
+  text-align: center;
+  margin: 2rem 0;
+}
+.h1{
+    text-decoration: underline;
+}
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-action{
+    text-align: center;
+    display: block;
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    text-align: center;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.back{
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.back .inner{
+    top: 50%;
+    font-size: 30px;
+
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 75%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+  
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 50rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+        </style>
+    </head>
+    <body>
+        <div class="abc">
+        <ul class="sidenav">
+            <li><a class="active" href="index.html">Home</a></li>
+           
+            <li><a href="contact.html">Contact</a></li>
+            
+          </ul>
+        </div>
+<div class="wrapper">
+  <h1> About us</h1>
+  <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url('img/ankit.jpg')">
+                        <div class="inner">
+                            <p>Ankit Kumar</p>
+              <span>ISE,7th Sem</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                                
+                          <p>Hi,I am Ankit Kumar,student of 7th Sem ISE.</p>
+                        </div>
+                        <div class="card-action">
+
+                                </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image:url('img/anurag.jpg')">
+                        <div class="inner">
+                            <p>Anurag Verma</p>
+              <span>ISE,7th Sem</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            
+                            <p>Hi,I am Anurag Verma,student of 7th Sem ISE.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url('img/ateeb.jpg')">
+                        <div class="inner">
+                            <p>Ateeb Raza</p>
+              <span>ISE,7th Sem</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                           
+                            <p>Hi,I am Ateeb Raza,student of 7th Sem ISE.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url('img/ujjwal.jpg')">
+                        <div class="inner">
+                            <p>Ujjwal Bhuwania</p>
+              <span>ISE,7th Sem</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            
+                            <p>Hi,I am Ujjwal Bhuwania,student of 7th Sem ISE.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+                            </div>
+    
+ </div>
+ <div class="about_us">
+     <p> Traveling in train is always a great experience.Luscious green fields, big trees, snow covered mountains and clear blue rivers are a paradise to watch.However the booking experience along with the official site use is not so pleasant.
+         WE, a group of undergraduate students of 7th Semester have build a website which would ease the user experience a large margin.We are currently providing 12 services to the users with which we aim to better the user experience. </p>
+<br></br>
+
+        </div>
+        <div class="technology">
+            <h1>Technology Stack Used</h1><br></br>
+            <h2>We have incorporated HTML,CSS, JQuery for the Front-end.Firebase for authentication purposes and JQuery for Back-End.</h1>
+        </div>
+</body>
+ </html>

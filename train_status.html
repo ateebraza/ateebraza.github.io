@@ -11,6 +11,17 @@
     color: black;
     text-justify: auto;
 }
+.h3{
+            text-align: center;
+            color:#444;
+            text-justify: auto;
+}
+.display1{
+            text-justify: auto;
+            color: black;
+            background-repeat: repeat;
+            background-color: antiquewhite;
+}
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -108,6 +119,9 @@ function myFunction() {
 }
 $(document).ready(function(){
     $("button").click(function(){
+        $("button").animate({
+            height: 'toggle'
+        });
         $.getJSON(url, function(result) {
             $("h3").append(result["position"] + " ");
 			console.log(result["position"]);
@@ -115,9 +129,10 @@ $(document).ready(function(){
     });
 });
 </script>
-<button>Get JSON data</button>
+<div class="display1">
 
 <h3></h3>
+</div>
 
 </body>
 </html>
