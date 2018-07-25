@@ -1,35 +1,52 @@
-(function() {
-	 // intialise firebase
-	 const config={
-		 apiKey:"AIzaSyD24V3KKMhGa9yZ-OXtIhs6HF5TZ9FEMkw",
-		 authDomain:"railgo-7b1df.firebaseapp.com",
-		 databaseURL: "https://railgo-7b1df.firebaseio.com",
-		 storageBucket:"railgo-7b1df.appspot.com",
-	 };
-	 firebase.initializeApp(config);
-	 
-	 //get element
-	 const txtemail=document.getElementById('txtemail');
-	 const txtpassword=document.getElementById('txtpassword');
-	 const btnlogin=document.getElementById('btnlogin');
-	 //add login event
-	 btnlogin.addEventListener('click',e=> {
-		 // get email and pass
-		 const email=txtemail.value;
-		 const pass=txtpassword.value;
-		 const auth=firebase.auth();
-		 // sign in
-		 const promise=auth.signInWithEmailAndPassword(email,pass);
-		 promise.catch(e=> console.log(e.message));
-	 });	 
-      // add realtime listener
-	  firebase.auth().onAuthStateChanged(firebaseUser => {
-		  if(firebaseUser)  {
-			  console.log(firebaseUser);
-			  window.location.href='services.html';
-		  }else{
-			  console.log('not logged in');
-		  }
-	  });
-		 
+(function(){
+
+    //initialise firebase
+    const config = {
+        apiKey: "AIzaSyA0hqNY5N4C6AI2_g21NDfLjZces296Xk4",
+        authDomain: "rail-go-68c10.firebaseapp.com",
+        databaseURL: "https://rail-go-68c10.firebaseio.com",
+        projectId: "rail-go-68c10",
+        storageBucket: "",
+        messagingSenderId: "1044621455794"
+      };
+      firebase.initializeApp(config);
+
+
+      const txtEmail =document.getElementById('txtEmail');
+const txtPassword =document.getElementById('txtPassword');
+const btnLogin =document.getElementById('btnLogin');
+const btnSignUp =document.getElementById('btnSignUp');
+//const btnLogout =document.getElementById('btnLogout');
+
+btnLogin.addEventListener('click',e=>{
+    const email=txtEmail.value;
+    const pass=txtPassword.value;
+    const auth=firebase.auth();
+
+    const promise = auth.signInWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
+})
+
+}());
+btnSignUp.addEventListener('click',e=>{
+    const email=txtEmail.value;
+    const pass=txtPassword.value;
+    const auth=firebase.auth();
+
+    const promise = auth.createUserWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
 });
+//btnLogout.addEventListener('click', e =>{
+  //  firebase.auth().signOut();
+//} );
+firebase.auth().onAuthStateChanged(firebaseUser =>{
+    if(firebaseUser){
+        console.log(firebaseUser);
+        window.location="http://ateebraza.github.io/services.html";
+        
+    }else{
+        console.log('notloggedin');
+    }
+});
+
+

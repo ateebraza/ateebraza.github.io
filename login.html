@@ -1,5 +1,10 @@
 <html>
 <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 <title>Login Form </title>
 <style>
     body{
@@ -95,16 +100,19 @@ h1{
         <h1>Login Here</h1>
         <form>
             <p>Username</p>
-            <input type="text" name="" placeholder="Enter Username">
+            <input type="text" name="" id="txtEmail" placeholder="Enter Username">
             <p>Password</p>
-            <input type="password" name="" placeholder="Enter Password">
-            <input type="button" value="Login" onclick="window.location.href='services.html'">
+            <input type="password" name="" id="txtPassword" placeholder="Enter Password">
+            <input type="button" value="Login" class ="btn btn-action" id="btnLogin">
             <a href ="index.html">Return to home page</a>
+       <br>
+            <p>Don't have an account?</p>
             <br>
-            <a href="signup.html">Don't have an account?</a>
+            <button id="btnSignUp" class ="btn btn-secondary">Sign Up</button>
         </form>
         
     </div>
+    <script src="app.js"></script>
 
 </body>
 </head>
