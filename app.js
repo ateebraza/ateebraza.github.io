@@ -45,7 +45,7 @@ firebase.auth().onAuthStateChanged(firebaseUser =>{
         window.location="http://ateebraza.github.io/services.html";
         
     }else{
-        console.log('notloggedin');
+        alert("Either incorrect user details or new user!");
     }
 });
 
