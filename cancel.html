@@ -9,7 +9,6 @@
         * {
             box-sizing: border-box;
         }
-
         .display1{
             text-justify: auto;
             color: black;
@@ -28,7 +27,6 @@
             text-justify: auto;
             
         }
-
         input[type=text],
         select,
         textarea {
@@ -38,12 +36,10 @@
             border-radius: 4px;
             resize: vertical;
         }
-
         label {
             padding: 12px 12px 12px 0;
             display: inline-block;
         }
-
         input[type=submit] {
             background-color: #4CAF50;
             color: white;
@@ -53,39 +49,31 @@
             cursor: pointer;
             float: right;
         }
-
         input[type=submit]:hover {
             background-color: #45a049;
         }
-
         .container {
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
         }
-
         .col-25 {
             float: left;
             width: 25%;
             margin-top: 6px;
         }
-
         .col-75 {
             float: left;
             width: 75%;
             margin-top: 6px;
         }
-
         /* Clear floats after the columns */
-
         .row:after {
             content: "";
             display: table;
             clear: both;
         }
-
         /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-
         @media screen and (max-width: 600px) {
             .col-25,
             .col-75,
@@ -119,6 +107,7 @@
 
 
         </form>
+		<input type="button" value="Refresh Page" onClick="history.go(0)">
         <button onclick="myFunction()">Submit</button>
         </div>
         
@@ -133,9 +122,7 @@
         });
                     var date = $("input").val();
                     var url = "https://api.railwayapi.com/v2/cancelled/date/" + date + "/apikey/hle1qd3kks/";
-
                     console.log({ date, url })
-
                     $.getJSON(url, function (result) {
                         //$("h3").append("Train Number: "+result.train.number + " "+"</br>"+"Train Number: "+result.train.name+" "+"</br>");
                         $("h3").append("No.of Trains cancelled" + " " + result.trains.length + "</br></br>");
