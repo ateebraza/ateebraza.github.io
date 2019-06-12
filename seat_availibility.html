@@ -169,7 +169,7 @@ $(document).ready(function(){
             height: 'toggle'
         });
         $.getJSON(url, function(result) {
-          $("h3").append("Name: "+result.train.name + " "+"</br>"+"Number: "+result.train.number + " "+"</br>"+"From: "+result.from_station.name + " "+"</br>"+"To: "+result.to_station.name + " "+"</br>"+"Quota: "+result.quota.name + " "+"</br>"+"Availibility: "+result.availability[0].status + " "+"  "+"  "+"Seat Available: "+result.availability[0].status+" "+"</br>");
+          $("h3").append("Name: "+result.train.name + " "+"</br>"+"Number: "+result.train.number + " "+"</br>"+"From: "+result.from_station.name + " "+"</br>"+"To: "+result.to_station.name + " "+"</br>"+"Quota: "+result.quota.name + " "+"</br>"+"Availibility: "+result.availability[1].status + " "+"  "+"  "+"Seat Available: "+result.availability[0].status+" "+"</br>");
 			console.log(result);
         });
     });
