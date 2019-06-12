@@ -98,6 +98,12 @@ input[type=submit]:hover {
       <div class="col-75">
         <input type="text" pattern="\d{1,2}-\d{1,2}-\d{4}" class="datepicker" name="date" value="" placeholder="Input date in dd-mm-yyyy only"/>
       </div>
+      <div class="col-25">
+        <label for="fname">Station Code</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="scode" name="scode" placeholder="Station Code..">
+      </div>
     </div>
   </form>
   <input type="button" value="Refresh Page" onClick="history.go(0)">
@@ -116,6 +122,7 @@ function myFunction() {
     document.getElementById("tno").innerHTML = tno;
 	document.getElementById("date").innerHTML = date;
 	url="https://api.railwayapi.com/v2/live/train/"+tno+"/date/"+date+"/apikey/53enze0u9o/";
+    url="https://api.railwayapi.com/v2/live/train/"+tno+"/station/"+scode+"/date/"+date+"/apikey/53enze0u9o/";
 	
 }
 $(document).ready(function(){
