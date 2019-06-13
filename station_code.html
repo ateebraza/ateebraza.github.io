@@ -116,7 +116,7 @@ $(document).ready(function(){
         $.getJSON(url, function(result) {
 		
             $("h3").append("Station Name :"+result.stations[0].name + "</br> "+"Longitude :"+result.stations[0].lng+"</br>"+"Latitude :"+result.stations[0].lat+"</br> ");
-			console.log(result);
+			console.log(result.response_code);
 			
         });
     });
