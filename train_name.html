@@ -115,14 +115,14 @@ $(document).ready(function(){
             height: 'toggle'
         });
         $.getJSON(url, function(result) {
-            $("h3").append("Train Number: "+result.train.number + " "+"</br>"+"Train Number: "+result.train.name+" "+"</br>");
-			for(var i=0;i<result.train.days.length;i++){
-			$("h3").append("Days: "+result.train.days[i].day-code +" "+"</br>"+"runs: "+result.train.days[i].runs+" "+"</br></br>");
-			}
+            $("h3").append("Train Number: "+result.train.number + " "+"</br>"+"Train Name: "+result.train.name+" "+"</br>");
+			//for(var i=0;i<result.train.days.length;i++){
+			//$("h3").append("Days: "+result.train.days[i].day-code +" "+"</br>"+"runs: "+result.train.days[i].runs+" "+"</br></br>");
+			//}
 			console.log(result);
         });
     });
-});
+//});
 </script>
 
 
