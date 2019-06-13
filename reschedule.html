@@ -119,7 +119,7 @@ $(document).ready(function(){
 		$("h3").append("total no. of trains resheduled"+" "+result.trains.length+"</br></br>");
 	        for(var i=0;i<result.trains.length;i++){
 		   $("h3").append("Name: "+result.trains[i].name + " "+"</br>"+"Number: "+result.trains[i].number + " "+"</br>"+"Rescheduled_Time: "+result.trains[i].rescheduled_time+ " "+"</br>"+"resheduled_date: "+result.trains[i].rescheduled_date + " "+"</br>"+"Time_Diff: "+result.trains[i].time_diff + " "+"</br>"+"From: "+result.trains[i].from_station.name + " "+"</br>"+"To: "+result.trains[i].to_station.name + " "+"</br></br>");
-			//console.log(result["position"]);
+			console.log(result);
 			}
         });
     });
